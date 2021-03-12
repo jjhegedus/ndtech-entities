@@ -1,0 +1,18 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/22ndtech/ndtech-entities
+gazelle(name = "gazelle")
+
+go_library(
+    name = "ndtech-entities_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/22ndtech/ndtech-entities",
+    visibility = ["//visibility:private"],
+)
+
+go_binary(
+    name = "ndtech-entities",
+    embed = [":ndtech-entities_lib"],
+    visibility = ["//visibility:public"],
+)
