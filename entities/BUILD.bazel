@@ -1,0 +1,13 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/jjhegedus/ndtech-entities/entities
+gazelle(name = "gazelle")
+
+go_library(
+    name = "entities",
+    srcs = ["EntitiesServer.go"],
+    importpath = "github.com/jjhegedus/ndtech-entities/entities",
+    visibility = ["//visibility:public"],
+    deps = ["//protos:entities"],
+)

@@ -1,3 +1,3 @@
-module github.com/22ndtech/ndtech-entities
+module github.com/jjhegedus/ndtech-entities
 
 go 1.15
