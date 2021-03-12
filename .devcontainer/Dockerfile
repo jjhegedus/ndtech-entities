@@ -43,4 +43,8 @@ ENV PATH=$PATH:/opt/bazel-watcher/bazel-bin/ibazel/linux_amd64_stripped
 ENV GO111MODULE=on
 RUN go get google.golang.org/protobuf/cmd/protoc-gen-go google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
+RUN curl -LO https://github.com/fullstorydev/grpcurl/releases/download/v1.8.0/grpcurl_1.8.0_linux_x86_64.tar.gz \
+&& tar -xvf grpcurl_1.8.0_linux_x86_64.tar.gz grpcurl \
+&& sudo mv grpcurl /usr/local/bin/
+
 ENV PATH="$PATH:$GOPATH/bin"

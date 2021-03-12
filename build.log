@@ -1,0 +1,2 @@
+Build options: --subcommands=pretty_print --verbose_failures --explain=build.log --verbose_explanations
+Executing action 'BazelWorkspaceStatusAction stable-status.txt': unconditional execution is requested.

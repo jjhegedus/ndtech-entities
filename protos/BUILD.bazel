@@ -22,3 +22,8 @@ go_library(
     importpath = "github.com/jjhegedus/ndtech-entities/protos",
     visibility = ["//visibility:public"],
 )
+
+sh_binary(
+    name = "mod-tidy-protos",
+    srcs = ["mod-tidy-protos.sh"],
+)
